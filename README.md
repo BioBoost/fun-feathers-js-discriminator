@@ -1,6 +1,8 @@
 # fun-feathers-js-discriminator
 
-> 
+Instead of strict inheritance, Mongoose uses discriminators as their schema inheritance model. To use them, pass in a discriminatorKey option to your schema object and use Model.discriminator('modelName', schema) instead of mongoose.model()
+
+Feathers comes with full support for mongoose discriminators, allowing for automatic fetching of inherited types. 
 
 ## About
 
