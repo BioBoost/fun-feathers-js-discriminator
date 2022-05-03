@@ -10,7 +10,6 @@ export default function (app: Application): Array<Model<any>> {
   const mongooseClient: Mongoose = app.get('mongooseClient');
   const { Schema } = mongooseClient;
 
-
   const options = {
     discriminatorKey: '_type'
   };
@@ -20,7 +19,6 @@ export default function (app: Application): Array<Model<any>> {
     updatedAt: { type: Date, 'default': Date.now }
   }, options);
   
-  // PostSchema.index({ 'updatedAt': -1, background: true });
   
   const PostModel = mongooseClient.model('posts', PostSchema);
 
@@ -28,7 +26,6 @@ export default function (app: Application): Array<Model<any>> {
     text: { type: String, default: null }
   }, options);
   
-  // TextPostSchema.index({'updatedAt': -1, background: true});
   
   // Note the use of `Post.discriminator` rather than `mongoose.discriminator`.
   const TextPost = PostModel.discriminator('text', TextPostSchema);
