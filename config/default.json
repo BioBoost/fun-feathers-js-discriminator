@@ -28,5 +28,5 @@
       "passwordField": "password"
     }
   },
-  "mongodb": "mongodb://localhost:27017/fun_feathers_js_discriminator"
+  "mongodb": "mongodb://root:example@mongo:27017/dust"
 }
