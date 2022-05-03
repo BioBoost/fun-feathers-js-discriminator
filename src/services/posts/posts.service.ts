@@ -18,7 +18,7 @@ export default function (app: Application): void {
   const options = {
     Model: models[0],
     paginate: app.get('paginate'),
-    discriminators: [ models[1] ]
+    discriminators: models.slice(1)
   };
 
   // Initialize our service with any options it requires
